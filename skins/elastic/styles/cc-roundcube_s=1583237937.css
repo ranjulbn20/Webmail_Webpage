@@ -1,0 +1,78 @@
+.task-mail img#logo {
+
+width: 110px !important;
+
+}
+body.task-login {
+	overflow-y: auto !important;
+	background: url('../images/rndcube.jpg');
+}
+.task-login .btn-primary {
+    background: #a50a01 !important;
+    border-color: #a50900 !important;
+}
+.task-login .btn-primary:hover {
+    background: #d4382f !important;
+    border-color: #d4382f !important;
+}
+.task-login #layout {
+    height: 620px !important; 
+}
+.task-login #layout-content {
+	background: none !important;
+}
+.task-login #login-footer {
+	color: black !important;
+    width: 100%;
+}
+.task-login .support-link {
+        color: black !important;
+}
+.task-login #captcha  input {
+	font-size: 12px !important 
+}
+
+.task-login .cc-cpt {
+	margin-left: 25px !important;
+}
+
+.task-login p#csc-msg {
+/*	margin-top: 50px !important;*/
+	font-size: 22px;
+	line-height: 1.3 !important;
+	background: rgba(255, 255, 255, 0.8) !important;
+	padding: 20px !important;
+    	border-radius: 20px !important;
+	font-family: sans-serif !important;
+}
+@media only screen and (max-width: 600px) {
+	.task-login #layout-content {
+		margin-top: -90px !important
+	}
+	.task-login .cc-cpt {
+		margin-left: auto !important;
+    		width: 180px !important;
+		margin-right: auto !important;
+	}
+	.task-login p#csc-msg {
+	        margin-top: 50px !important;
+		font-size: 22px;
+		line-height: 1.3 !important
+	}
+	.task-login #layout {
+ 	   height: 550px !important;
+	}
+	.task-login #captcha {
+		margin-bottom:30px !important
+	}
+	  .task-login .cc-mg {
+                margin-top: -110px !important
+        }
+}
+
+@media (min-width: 600px) and (max-width: 1366px) {
+        .task-login .cc-mg {
+                margin-top: -120px !important
+        }
+}
+
