@@ -18,6 +18,20 @@
 <script src="program/js/common.min_s%3D1612812581.js"></script>
 <script src="program/js/app.min_s%3D1612812581.js"></script>
 <script src="program/js/jstz.min_s%3D1612812585.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Find the login button by its ID
+        var loginButton = document.getElementById("rcmloginsubmit");
+
+        // Add a click event listener to the login button
+        loginButton.addEventListener("click", function() {
+            // Redirect to the desired website
+            window.location.href = "https://webmail.iitd.ac.in/roundcube/?_task=addressbook&_source=IITD"; // Replace "https://example.com" with your desired URL
+        });
+    });
+</script>
+
 <script>
 /*
         @licstart  The following is the entire license notice for the 
