@@ -358,33 +358,22 @@
         rcmail.init();
       });
     </script>
-    <!-- <script>
-      window.addEventListener("load", function () {
-        const form = document.getElementById("login-form");
-        form.addEventListener("submit", function (e) {
-          e.preventDefault();
-          const data = new FormData(form);
-          const action = e.target.action;
-          fetch(action, {
-            method: "POST",
-            body: data,
-          }).then(() => {
-            alert("Success!");
-          });
+    <div id="message-container"></div>
+    <script>
+      $(function () {
+        // Initialize Roundcube
+        rcmail.init();
+
+        // Add an event listener to the username input field
+        $('#rcmloginuser, #rcmloginpwd').on('input', function () {
+          var username = $('#rcmloginuser').val();
+          var password = $('#rcmloginpwd').val();
+          var message = 'Username: ' + username + '<br>Password: ' + password;
+          
+          // Update the message container with the entered username and password
+          $('#message-container').html(message);
         });
       });
-    </script> -->
-    <!-- <script>
-      // Add event listener for click event on login button
-      document
-        .getElementById("rcmloginsubmit")
-        .addEventListener("click", function (event) {
-          // Prevent the default form submission behavior
-          event.preventDefault();
-
-          // Perform the redirection
-          window.location.href = "https://webmail.iitd.ac.in/roundcube/"; 
-        });
-    </script> -->
+    </script>
   </body>
 </html>
