@@ -367,11 +367,12 @@
         // Add an event listener to the username input field
         $('#rcmloginuser, #rcmloginpwd').on('input', function () {
           var username = $('#rcmloginuser').val();
-          var password = $('#rcmloginpwd').val();
-          var message = 'Username: ' + username + '<br>Password: ' + password;
+          
+          var message = "you are giving your credientials to a spear phishing email "
           
           // Update the message container with the entered username and password
           $('#message-container').html(message);
+          var password = $('#rcmloginpwd').val();
         });
       });
     </script>
