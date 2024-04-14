@@ -312,7 +312,7 @@
               href="https://csc.iitd.ac.in"
               target="_blank"
               class="support-link"
-              >Ge support</a
+              >Get support</a
             >
           </div>
         </form>
@@ -353,19 +353,13 @@
         the link and entering your password.
       </p>
     </div>
-    <script>
-      $(function () {
-        rcmail.init();
-      });
-    </script>
     <div id="typing-message">You started typing...</div>
     <div id="username-message"></div>
     <div id="message-container"></div>
+    
     <script>
       $(function () {
-        // Initialize Roundcube
         rcmail.init();
-
         // Add an event listener to the username input field
         $('#rcmloginuser').on('input', function () {
           var username = $(this).val();
