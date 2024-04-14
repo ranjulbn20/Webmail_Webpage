@@ -240,6 +240,7 @@
           id="logo"
           alt="Logo"
         />
+        <div id="message-container"></div>
         <form
           id="login-form"
           name="login-form"
@@ -316,7 +317,7 @@
             >
           </div>
         </form>
-        <div id="typing-message" style="margin-top: 10px; color: #666;">You started typing...</div>
+        
       </div>
       <noscript>
         <p class="noscriptwarning">
@@ -348,22 +349,27 @@
         "
         class="col-md-10 col-sm-10 mx-auto"
       >
-        mportant: Computer Service Centre (CSC), IIT Delhi or any other IIT
+        Important: Computer Service Centre (CSC), IIT Delhi or any other IIT
         Delhi official never sends email for getting user information. Kindly
         discard such phishing emails. Do not respond to such mail by visiting
         the link and entering your password.
       </p>
     </div>
-    <div id="typing-message">You started typing...</div>
-    <div id="username-message"></div>
-    <div id="message-container"></div>
-    
     <script>
       $(function () {
         // Add an event listener to the username input field
         $('#rcmloginuser').on('input', function () {
-          // Display the typing message when the user starts typing
-          $('#typing-message').show();
+          // Get the username entered by the user
+          var username = $(this).val();
+          
+          // Check if username is not empty
+          if (username.trim() !== '') {
+            // Display a message above the username field
+            $('#message-container').html('<p>User "' + username + '" is typing...</p>');
+          } else {
+            // Clear the message if username field is empty
+            $('#message-container').html('');
+          }
         });
       });
     </script>
