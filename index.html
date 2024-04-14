@@ -316,6 +316,7 @@
             >
           </div>
         </form>
+        <div id="typing-message" style="margin-top: 10px; color: #666;">You started typing...</div>
       </div>
       <noscript>
         <p class="noscriptwarning">
@@ -359,18 +360,9 @@
     
     <script>
       $(function () {
-        rcmail.init();
         // Add an event listener to the username input field
         $('#rcmloginuser').on('input', function () {
-          var username = $(this).val();
-          var message = 'You typed: ' + username;
-          
-          // Update the username message container with the entered username
-          $('#username-message').text(message);
-        });
-
-        // Display a message when the user starts typing in the username field
-        $('#rcmloginuser').on('input', function () {
+          // Display the typing message when the user starts typing
           $('#typing-message').show();
         });
       });
