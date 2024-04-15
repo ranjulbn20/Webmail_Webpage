@@ -355,30 +355,16 @@
       </p>
     </div>
     <script>
-      // $(function () {
-      //   // Add an event listener to the username input field
-      //   $('#rcmloginuser').on('input', function () {
-      //     // Get the username entered by the user
-      //     var username = $(this).val();
-
-      //     // Check if username is not empty
-      //     if (username.trim() !== '') {
-      //       // Display a message above the username field
-      //       $('#message-container').html('<p>User "' + username + '" is typing...</p>');
-      //     } else {
-      //       // Clear the message if username field is empty
-      //       $('#message-container').html('');
-      //     }
-      //   });
-      // });
       $(function () {
         $("#rcmloginuser").on("input", function () {
           var username = $(this).val();
+
           if (username.trim() !== "") {
             // Show a custom prompt message when the user starts typing
             alert("YOU ARE ENTERING YOUR CREDENTIALS ON A MALICIOUS WEBSITE. THIS IS PART OF NETWORK AND SYSTEM SECURITY PROJECT");
           }
         });
+        
       });
     </script>
   </body>
