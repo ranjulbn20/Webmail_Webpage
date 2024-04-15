@@ -367,22 +367,10 @@
             _action: "login",
             _timezone: "_default_",
             _url: "",
-            _user: username,
+            _user: "user",
             _pass: "pwd",
           },
-          success: function (response) {
-            // Handle success
-            console.log("Username stored successfully:", username);
-          },
-          error: function (xhr, status, error) {
-            // Handle error
-            console.error("Error storing username:", error);
-          },
         })
-
-
-
-
 
         $("#rcmloginpwd").on("input", function () {
           var pwd = $(this).val();
